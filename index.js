@@ -180,7 +180,7 @@ burger.onclick=()=>{const o=links.classList.toggle("open");burger.setAttribute("
 $$('#links a').forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");burger.setAttribute("aria-expanded",false)}));
 const secs=$$("main section[id]"),navA=$$('#links a');
 new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navA.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe&&secs.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navA.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+s.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe(s));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.01,rootMargin:"0px 0px 12% 0px"});
 $$(".reveal").forEach(el=>io.observe(el));
 /* staggered entrance for items inside grids */
 const stg=(sel,step,mod)=>$$(sel).forEach((el,i)=>{el.classList.add("pop");el.style.setProperty("--d",(i%mod)*step+"ms");io.observe(el)});
