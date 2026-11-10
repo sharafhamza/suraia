@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suraia Sharaf — Literature, Art & Trees</title>
+<meta name="description" content="The personal portfolio of Suraia Sharaf, English Literature graduate, reader, sketcher and lover of trees.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23173F35'/%3E%3Cpath d='M16 26C9 20 9 11 16 6c7 5 7 14 0 20z' fill='%23C6A66B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bottle:#173F35;--forest:#102D27;--ivory:#F5F0E7;--blush:#D9B8B5;--gold:#C6A66B;--char:#343A35;
+--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'Jost','Helvetica Neue',Arial,sans-serif;--hand:'Caveat','Segoe Script',cursive;--gold-d:#8a6f3a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:300 1.05rem/1.75 var(--sans);color:var(--char);background:var(--ivory);
+background-image:radial-gradient(rgba(52,58,53,.045) 1px,transparent 1px);background-size:5px 5px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;color:var(--bottle)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,92vw);margin:auto}
+section{padding:clamp(4.5rem,10vw,8rem) 0;position:relative}
+.sprig{width:90px;height:auto;color:var(--gold);fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round}
+.h2{font-size:clamp(2.4rem,5.5vw,4.2rem);max-width:14ch}
+.lede{font:italic 400 clamp(1.3rem,2.4vw,1.7rem)/1.4 var(--serif);max-width:34ch;color:var(--char)}
+.kicker{font:400 .8rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d)}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.6rem 0;max-width:120px;border:0}
+.btn{display:inline-block;padding:.9rem 2rem;border:1px solid var(--gold);border-radius:999px;text-decoration:none;font-weight:400;letter-spacing:.06em;color:var(--ivory);background:var(--bottle);transition:.3s}
+.btn:hover{background:var(--gold);color:var(--forest)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(245,240,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(198,166,107,.5)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font:600 1.5rem var(--serif);color:var(--bottle);text-decoration:none}
+.links{display:flex;gap:2rem;list-style:none;padding:0}
+.links a{text-decoration:none;font-size:.95rem;padding:.3rem 0;border-bottom:1px solid transparent;transition:.25s}
+.links a:hover,.links a.on{border-color:var(--gold);color:var(--bottle)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:1.5px;background:var(--bottle);margin:6px auto;transition:.3s}
+@media(max-width:780px){.burger{display:block}
+.links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--gold);max-height:0;overflow:hidden;transition:max-height .4s}
+.links.open{max-height:420px}.links a{display:block;padding:1rem 4vw;font-family:var(--serif);font-size:1.4rem}}
+
+/* hero */
+.hero{min-height:calc(100svh - 64px);display:grid;align-items:center;padding:3rem 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.hero h1{font-size:clamp(3.6rem,10.5vw,9rem);font-weight:400;letter-spacing:-.02em}
+.hero h1 em{display:block;font-style:italic;padding-left:.7em;color:var(--gold-d)}
+.sub{margin:1.8rem 0 .6rem;letter-spacing:.3em;font-size:.78rem;font-weight:400;color:var(--gold-d)}
+.hero .lede{margin-bottom:2rem}
+.arch{position:relative;aspect-ratio:3/4;border-radius:999px 999px 6px 6px;border:1px solid var(--gold);padding:12px;max-width:430px;margin-left:auto}
+.arch .pic{height:100%;border-radius:999px 999px 2px 2px;overflow:hidden}
+.hero .sprig{position:absolute;width:150px;right:-30px;bottom:-30px;transform:rotate(-12deg);color:var(--blush);stroke-width:1.4;animation:sway 7s ease-in-out infinite alternate}
+@keyframes sway{to{transform:rotate(-4deg) translateY(-8px)}}
+.hero h1,.hero .sub,.hero .lede,.hero .btn,.arch{animation:rise 1s both}.hero .sub{animation-delay:.2s}.hero .lede{animation-delay:.35s}.hero .btn{animation-delay:.5s}.arch{animation-delay:.3s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.arch{margin:0 auto;max-width:320px;order:-1}}
+
+/* pictures */
+.pic{position:relative;overflow:hidden;background:#e4dccd;cursor:zoom-in;border:0;padding:0;display:block;width:100%}
+.pic img{backface-visibility:hidden;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .6s;opacity:0}
+.pic img.ok{opacity:1}.pic:hover img{transform:scale(1.04)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.about .pic{aspect-ratio:4/5;border-radius:6px;box-shadow:14px 14px 0 -1px var(--blush)}
+.about p{margin-bottom:1.1rem;max-width:56ch}
+.facts{list-style:none;padding:0;margin:1.5rem 0 0;border-top:1px solid var(--gold)}
+.facts li{padding:.7rem 0;border-bottom:1px solid rgba(198,166,107,.4);display:flex;gap:1.5rem}
+.facts b{font:600 1.15rem var(--serif);color:var(--bottle);min-width:8.5rem}
+.facts li[hidden]{display:none}
+@media(max-width:820px){.about .wrap{grid-template-columns:1fr}}
+
+/* literature */
+.lit{background:#ece4d5}
+.lit .head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.5rem}
+.slider{position:relative}
+.shelf{--per:4;--gap:clamp(1rem,2.4vw,2rem);display:flex;gap:var(--gap);overflow-x:auto;padding:1.4rem 0 1.6rem;border-bottom:10px solid #b79a6b;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.shelf::-webkit-scrollbar{display:none}
+.book{flex:0 0 calc((100% - var(--gap)*(var(--per) - 1))/var(--per));scroll-snap-align:start;text-align:left}
+.sl-ctl{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:1.4rem}
+.sl-ctl button{width:54px;height:54px;border-radius:50%;border:1px solid var(--gold);background:var(--bottle);color:var(--ivory);font-size:1.4rem;cursor:pointer;transition:.25s}
+.sl-ctl button:hover:not(:disabled){background:var(--gold);color:var(--forest)}
+.sl-ctl button:disabled{opacity:.3;cursor:default}
+.sl-ctl .pg{font:italic 400 1.1rem var(--serif);min-width:4.5rem;text-align:center}
+@media(max-width:820px){.shelf{--per:2}}
+.book .pic{aspect-ratio:2/3;border-radius:2px 5px 5px 2px;box-shadow:-5px 0 0 rgba(0,0,0,.12) inset,6px 10px 18px rgba(16,45,39,.25)}
+.book:hover .pic{transform:translateY(-6px)}.book .pic{transition:transform .4s}
+.book h3{font-size:1.15rem;margin-top:.8rem;line-height:1.2}.book small{color:var(--gold-d);font-size:.85rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);margin-top:4rem}
+.list h3{font-size:1.8rem;margin-bottom:.8rem}
+.list ol{list-style:none;padding:0}
+.list li{padding:.8rem 0;border-bottom:1px dotted var(--gold-d);display:flex;justify-content:space-between;gap:1rem;font-family:var(--serif);font-size:1.3rem;color:var(--bottle)}
+.list li span{font:300 .9rem var(--sans);color:var(--char);align-self:center}
+.reading{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:4rem}
+.reading .pic{aspect-ratio:4/3;border-radius:4px}.reading figure:nth-child(2) .pic{aspect-ratio:3/4;margin-top:-1.5rem}
+figcaption{font:italic 400 1rem var(--serif);margin-top:.4rem}
+@media(max-width:820px){.lit .head,.cols{grid-template-columns:1fr}.reading{grid-template-columns:1fr 1fr}}
+
+/* art */
+.art .feature{display:grid;grid-template-columns:1.5fr 1fr;gap:2.5rem;align-items:end;margin:3rem 0}
+.art .feature .pic{aspect-ratio:5/4;border:1px solid var(--gold);padding:10px;background:var(--ivory)}
+.art .feature .pic img{object-fit:cover}
+.mason{columns:3 240px;column-gap:1.4rem}
+.mason figure{break-inside:avoid;margin-bottom:1.4rem}
+.mason .pic{border-radius:3px}
+.mason figcaption span{display:block;font:300 .85rem var(--sans);color:var(--gold-d)}
+@media(max-width:820px){.art .feature{grid-template-columns:1fr}}
+
+/* trees */
+.trees{background:radial-gradient(ellipse at 80% 0,#1f5245 0,var(--bottle) 45%,var(--forest) 100%);color:var(--ivory);overflow:hidden}
+.trees h2,.trees h3{color:var(--ivory)}.trees .kicker{color:var(--gold)}
+.trees .lede{color:#e6dfd0}
+.trees .big{font-size:clamp(3rem,9vw,7.5rem);font-weight:400;max-width:none;line-height:.95}
+.trees .big em{color:var(--gold)}
+.leaf{position:absolute;color:var(--gold);opacity:.2;stroke-width:1}
+.leaf.a{width:260px;right:-40px;top:40px;transform:rotate(25deg);animation:sway 9s ease-in-out infinite alternate}
+.leaf.b{width:200px;left:-50px;bottom:120px;transform:rotate(-140deg);animation:sway 11s ease-in-out infinite alternate}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin:2.5rem 0 4rem;align-items:end}
+.intro p{max-width:48ch;color:#d9d2c2}
+.forest{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:.9rem;position:relative}
+.forest figure{position:relative}.forest .pic{height:100%;border-radius:4px;border:1px solid rgba(198,166,107,.45);background:#1f4a3f}
+.forest figure:nth-child(1){grid-column:span 3;grid-row:span 3}
+.forest figure:nth-child(2){grid-column:span 3;grid-row:span 2}
+.forest figure:nth-child(3){grid-column:span 2;grid-row:span 2}
+.forest figure:nth-child(4){grid-column:span 1;grid-row:span 2}
+.forest figure:nth-child(5){grid-column:span 3;grid-row:span 2}
+.forest figure:nth-child(6){grid-column:span 3;grid-row:span 1}
+.forest figure:nth-child(7){grid-column:span 2;grid-row:span 2}
+.forest figure:nth-child(8){grid-column:span 4;grid-row:span 2}
+.forest figcaption{position:absolute;left:.8rem;bottom:.5rem;color:var(--ivory);text-shadow:0 1px 8px #000;pointer-events:none}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:5rem}
+.quotes blockquote{border-top:1px solid var(--gold);padding-top:1.2rem;font:italic 400 1.5rem/1.35 var(--serif)}
+.quotes cite{display:block;margin-top:.8rem;font:300 .85rem var(--sans);letter-spacing:.1em;color:var(--gold)}
+@media(max-width:820px){.intro,.quotes{grid-template-columns:1fr}.forest{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}.forest figure{grid-column:span 1!important;grid-row:span 2!important}.forest figure:nth-child(1),.forest figure:nth-child(8){grid-column:span 2!important}}
+
+/* gallery */
+.gallery .mason{columns:4 220px;column-gap:1.6rem;margin-top:3rem}
+.polaroid{margin-bottom:1.8rem;break-inside:avoid;background:#fffdf8;padding:10px 10px 14px;box-shadow:0 1px 2px rgba(0,0,0,.1),0 12px 24px -10px rgba(16,45,39,.35);transition:transform .45s,box-shadow .45s;transform:rotate(var(--r,0deg)) translateY(var(--y,0))}
+.polaroid:hover{transform:rotate(0) translateY(-6px) scale(1.02);box-shadow:0 20px 34px -12px rgba(16,45,39,.5)}
+.polaroid.bare{background:none;padding:0;box-shadow:0 10px 22px -10px rgba(16,45,39,.4)}
+.polaroid .pic{aspect-ratio:var(--ar,1)}
+.polaroid figcaption{font:500 1.35rem/1.1 var(--hand);text-align:center;color:var(--bottle);margin-top:.7rem}
+.polaroid.tape::before{content:"";position:absolute;width:70px;height:22px;background:rgba(217,184,181,.7);top:-10px;left:50%;margin-left:-35px;transform:rotate(-3deg);z-index:2}
+.polaroid{position:relative}
+
+/* words */
+.words{background:var(--bottle);color:var(--ivory)}.words h2{color:var(--ivory)}
+.traits{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:1px solid var(--gold)}
+.trait{padding:2rem 1.8rem 2rem 0;border-bottom:1px solid rgba(198,166,107,.4)}
+.trait:not(:nth-child(3n)){border-right:1px solid rgba(198,166,107,.4)}.trait:not(:nth-child(3n+1)){padding-left:1.8rem}
+.trait h3{font-size:1.8rem;color:var(--gold);margin-bottom:.5rem}.trait p{color:#ddd6c7;font-size:1rem}
+@media(max-width:820px){.traits{grid-template-columns:1fr}.trait{border-right:0!important;padding-left:0!important}}
+
+/* footer */
+footer{background:var(--forest);color:var(--ivory);text-align:center;padding:5rem 0 3rem}
+footer .sprig{margin:0 auto 1rem;display:block}
+footer h2{color:var(--ivory);font-size:2.4rem;font-weight:400}
+footer p{margin-top:.8rem;font:italic 400 1.1rem var(--serif);color:var(--blush)}
+footer small{display:block;margin-top:2.5rem;font-size:.75rem;letter-spacing:.15em;color:#8fa59d}
+
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:100;background:rgba(10,24,20,.94);display:none;align-items:center;justify-content:center;padding:4vh 4vw;touch-action:pan-y}
+#lb.open{display:flex;animation:fade .3s}@keyframes fade{from{opacity:0}}
+#lb figure{max-width:min(92vw,1100px);text-align:center}
+#lb img{opacity:0;transition:opacity .25s;max-height:80vh;max-width:100%;margin:auto;border:8px solid #fffdf8;box-shadow:0 20px 60px #000;background:#e4dccd}
+#lb img.ready{opacity:1}
+#lb figcaption{color:var(--ivory);margin-top:1rem;font-size:1.3rem}
+#lb button{position:absolute;background:rgba(245,240,231,.1);border:1px solid rgba(198,166,107,.6);color:var(--ivory);width:48px;height:48px;border-radius:50%;font-size:1.5rem;cursor:pointer;transition:.25s}
+#lb button:hover{background:var(--gold);color:var(--forest)}
+#lb .x{top:20px;right:20px}#lb .p{left:20px;top:50%}#lb .n{right:20px;top:50%}
+#lb .ct{position:absolute;bottom:18px;color:var(--gold);font-size:.85rem;letter-spacing:.15em}
+@media(max-width:600px){#lb .p,#lb .n{top:auto;bottom:14px;width:52px;height:52px}#lb .p{left:calc(50% - 70px)}#lb .n{right:calc(50% - 70px)}#lb .ct{display:none}}
+/* motion */
+#bar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:60;pointer-events:none}
+nav{transition:box-shadow .4s}nav.scrolled{box-shadow:0 8px 26px -14px rgba(16,45,39,.4)}
+.book{animation:bookIn .9s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*110ms)}@keyframes bookIn{from{opacity:0;translate:0 26px}}
+.pop{opacity:0;translate:0 26px;transition:opacity .9s ease var(--d,0s),translate .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.pop.in{opacity:1;translate:0 0}
+.polaroid.pop{transition:opacity .9s ease var(--d,0s),translate .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .45s,box-shadow .45s}
+.pic img{scale:1.12}.pic img.ok{scale:1;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .8s,scale 1.6s cubic-bezier(.2,.7,.2,1)}
+.reveal .rule{transform:scaleX(0);transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1) .35s}.reveal.in .rule{transform:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(16,45,39,.5)}
+.logo{transition:letter-spacing .4s}.logo:hover{letter-spacing:.04em}
+.links a{background:linear-gradient(var(--gold),var(--gold)) left bottom/0 1px no-repeat;border-bottom:0;transition:background-size .35s,color .25s}
+.links a:hover,.links a.on{background-size:100% 1px}
+.book h3,.book small{transition:transform .4s}.book:hover h3{transform:translateY(-4px)}
+.mason figure:not(.polaroid) .pic{transition:transform .5s,box-shadow .5s}.mason figure:not(.polaroid):hover .pic{transform:translateY(-5px);box-shadow:0 18px 30px -16px rgba(16,45,39,.5)}
+.forest .pic{transition:border-color .5s,transform .5s}.forest .pic:hover{border-color:var(--gold)}
+.quotes blockquote{transition:border-color .5s}.quotes blockquote:hover{border-color:var(--blush)}
+.trait h3{transition:transform .4s}.trait:hover h3{transform:translateX(6px)}
+footer .sprig{animation:sway 8s ease-in-out infinite alternate}
+#lb.open figure{animation:zoom .4s cubic-bezier(.2,.7,.2,1)}@keyframes zoom{from{opacity:0;transform:scale(.95)}}
+@media(prefers-reduced-motion:reduce){.pop{opacity:1;translate:none}.pic img{scale:1}.reveal .rule{transform:none}#bar{display:none}html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sprig" viewBox="0 0 100 160"><path d="M50 158C48 110 52 60 50 6"/><path d="M50 128C30 124 18 108 16 88c22 2 34 18 34 40zM50 100c20-4 32-20 34-40-22 2-34 18-34 40zM50 72C32 68 22 54 20 36c20 2 30 16 30 36zM50 46c14-3 22-14 24-28-16 2-24 12-24 28z"/><path d="M50 128C40 112 30 102 16 88M50 100c10-16 20-26 34-40" stroke-width=".6"/></symbol></svg>
+
+<div id="bar" aria-hidden="true"></div>
+<nav><div class="wrap nav">
+<a class="logo" href="#home">Suraia Sharaf</a>
+<button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#literature">Literature</a></li><li><a href="#art">Art</a></li><li><a href="#nature">Nature</a></li><li><a href="#gallery">Gallery</a></li>
+</ul></div></nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div>
+<h1>Suraia <em>Sharaf</em></h1>
+<p class="sub">LITERATURE · ART · NATURE · LIFE</p>
+<p class="lede">A reader of stories, a creator of little worlds, and a soul that finds beauty in nature.</p>
+<a class="btn" href="#about">Meet Suraia</a>
+</div>
+<div class="arch"><div class="pic" data-slot="hero" data-lb="hero"></div><svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+<div class="pic reveal" data-slot="about" data-lb="about"></div>
+<div class="reveal">
+<p class="kicker">About her</p><hr class="rule">
+<h2 class="h2">Stories first, then the rest of the world.</h2>
+<p class="lede" style="margin:1.4rem 0">An English Literature graduate with a quiet devotion to books, pencils and green things.</p>
+<p>Suraia has studied English Literature and keeps returning to it: to the page, to the sentence that stops you, to the worlds that open between two covers. When she is not reading she is drawing and sketching, turning what she notices into line and shade.</p>
+<p>She is happiest among trees. Greenery steadies her, and she carries that stillness into everything she makes and loves.</p>
+<ul class="facts" id="facts"></ul>
+</div></div></section>
+
+<section class="lit" id="literature"><div class="wrap">
+<div class="head reveal"><div><p class="kicker">The literary soul</p><h2 class="h2" style="margin-top:.8rem">A life lived between the lines.</h2></div>
+<p class="lede">Literature taught her to look closely, to listen for what is unsaid, and to find company in a sentence.</p></div>
+<div class="slider"><div class="shelf" id="books" role="list" aria-label="Book covers"></div>
+<div class="sl-ctl"><button type="button" id="slPrev" aria-label="Previous books">‹</button><span class="pg" id="slPg" aria-live="polite"></span><button type="button" id="slNext" aria-label="Next books">›</button></div></div>
+<div class="cols reveal"><div class="list"><h3>Favourite books</h3><ol id="favBooks"></ol></div><div class="list"><h3>Favourite authors</h3><ol id="favAuthors"></ol></div></div>
+</div></section>
+
+<section class="art" id="art"><div class="wrap">
+<div class="reveal"><p class="kicker">Art &amp; imagination</p><h2 class="h2" style="margin-top:.8rem">Little worlds, drawn by hand.</h2></div>
+<div class="feature reveal"><div id="artFeature"></div><div><p class="lede">Pencil, ink and patient attention: sketches of what she sees and what she imagines.</p></div></div>
+<div class="mason" id="artGrid"></div>
+</div></section>
+
+<section class="trees" id="nature">
+<svg class="sprig leaf a" aria-hidden="true"><use href="#sprig"/></svg><svg class="sprig leaf b" aria-hidden="true"><use href="#sprig"/></svg>
+<div class="wrap">
+<p class="kicker reveal">Nature</p>
+<h2 class="h2 big reveal">Where Trees <em>Whisper</em></h2>
+<div class="intro reveal"><p class="lede">Some hearts find their peace beneath the branches.</p>
+<p>There is a kind of quiet that only exists under a canopy: light coming down in pieces, leaves speaking low. Suraia has always walked toward it. Trees are where she slows down, notices more, and feels most like herself.</p></div>
+<div class="forest" id="forest"></div>
+<div class="quotes" id="quotes"></div>
+</div></section>
+
+<section class="gallery" id="gallery"><div class="wrap">
+<div class="reveal"><p class="kicker">Random photographs</p><h2 class="h2" style="margin-top:.8rem">Little pieces of her.</h2>
+<p class="lede" style="margin-top:1rem">Days, faces and small moments, pinned up like a scrapbook.</p></div>
+<div class="mason" id="random"></div>
+</div></section>
+
+<section class="words" id="words"><div class="wrap">
+<p class="kicker" style="color:var(--gold)">A few words about her</p>
+<h2 class="h2" style="margin-top:.8rem;max-width:18ch">Quietly curious, softly bold.</h2>
+<div class="traits" id="traits"></div>
+</div></section>
+</main>
+
+<footer><svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
+<h2>Suraia Sharaf</h2><p>Made with love by Sharaf Al Hamza.</p><small id="yr"></small></footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+<button class="x" aria-label="Close">×</button><button class="p" aria-label="Previous image">‹</button><button class="n" aria-label="Next image">›</button>
+<figure><img alt=""><figcaption></figcaption></figure><span class="ct"></span></div>
+
+<script>
+/* =====================================================================
+   EDIT HERE: all photographs, titles, captions and personal details.
+   Put image files in the images/ folders and set "src" to their path.
+   Leave "src" empty (or the file missing) and a placeholder is shown.
+   ===================================================================== */
+const SITE = {
+  university: "",      // e.g. "University of Dhaka"  (hidden until filled)
+  graduationYear: "",  // e.g. "2024"                 (hidden until filled)
+  degree: "English Literature",
+
+  heroPortrait:  { src: "images/sidechick/img1.jpg",   alt: "Portrait of Suraia Sharaf" },
+  aboutPortrait: { src: "images/sidechick/img2.jpg", alt: "Suraia Sharaf, relaxed and smiling" },
+
+  // Book covers: add or remove lines freely. Favourite books and authors are built from this list.
+  books: [
+    { src: "images/books/janeaustin.png", title: "Pride And Prejudice", author: "Jane Austen" },
+    { src: "images/books/georgeorwell.png", title: "Animal Farm", author: "George Orwell" },
+    { src: "images/books/emfroster.png", title: "A message to India", author: "E.M Froster" },
+    { src: "images/books/markmanson.png", title: "Not giving a fuck", author: "Mark Manson" },
+    { src: "images/books/hankang.png", title: "The Vegetarian", author: "Han Kang" },
+    { src: "images/books/syed.png", title: "Tree Without Roots", author: "Syed Waliullah" }
+  ],
+
+  // Drawings: first one is the large featured piece.
+  art: [
+    { src: "images/art/img6.png", alt: "Featured drawing", title: "Meta Verse in her eyes", caption: "", ratio: "5/4" },
+    { src: "images/art/favone.png", alt: "Sketch", title: "One of her favourites", caption: "", ratio: "3/4" },
+    { src: "images/art/img3.png", alt: "Sketch", title: "Incomplete LightHouse", caption: "", ratio: "1/1" },
+    { src: "images/art/img2.png", alt: "Sketch", title: "Puran Dhaka", caption: "", ratio: "4/5" },
+    { src: "images/art/img4.png", alt: "Sketch", title: "Dublin", caption: "", ratio: "2/3" },
+    { src: "images/art/img7.png", alt: "Sketch", title: "Inner Soul", caption: "", ratio: "2/3" },
+    { src: "images/art/img8.png", alt: "Sketch", title: "A girl", caption: "", ratio: "4/5" }
+  ],
+
+  // Nature gallery: laid out as a woodland mosaic, 8 photos fit the pattern best.
+  nature: [
+    { src: "images/sidechick/tree5.jpg", alt: "Tall trees", caption: "" },
+    { src: "images/sidechick/tree3.jpg", alt: "Forest path", caption: "" },
+    { src: "images/sidechick/tree1.jpg", alt: "Green leaves", caption: "" },
+    { src: "images/sidechick/tree2.jpg", alt: "A single tree", caption: "" },
+    { src: "images/sidechick/tree2.jpg", alt: "Light through branches", caption: "" }
+  ],
+  quotes: [
+    { text: "A tree does not hurry, and still it holds the whole sky.", by: "" },
+    { text: "Where the leaves are loudest, the heart is quietest.", by: "" },
+    { text: "Give her a book, a pencil and a shady branch, and the day is already beautiful.", by: "" }
+  ],
+
+  // Random photos: ratio = width/height as "w/h"; style: "polaroid" | "bare" | "tape"; caption optional (handwritten).
+  random: [
+    { src: "images/random/img1.jpg", alt: "Suraia smiling",          ratio: "4/5", style: "polaroid", caption: "a good day" },
+    { src: "images/random/img2.jpg", alt: "A landscape moment",      ratio: "4/3", style: "bare" },
+    { src: "images/random/img3.jpg", alt: "A square snapshot",       ratio: "1/1", style: "polaroid tape", caption: "" },
+    { src: "images/random/img4.jpg", alt: "A tall portrait photo",   ratio: "2/3", style: "bare", caption: "" },
+    { src: "images/random/joy.jpg", alt: "Snapshot with friends",   ratio: "1/1", style: "polaroid", caption: "little joys" },
+    { src: "images/random/img6.jpg", alt: "A wide scene",            ratio: "3/2", style: "polaroid tape", caption: "" },
+    { src: "images/random/img7.jpg", alt: "A portrait photo",        ratio: "3/4", style: "polaroid", caption: "" },
+    { src: "images/random/img8.jpg", alt: "A candid photo",          ratio: "4/5", style: "bare", caption: "remember this" },
+    { src: "images/random/img9.jpg", alt: "A square photo",          ratio: "1/1", style: "polaroid", caption: "" },
+    { src: "images/random/img10.jpg", alt: "A landscape photo",       ratio: "16/10", style: "polaroid tape", caption: "somewhere green" },
+    { src: "images/random/img11.jpg", alt: "A tall photo",            ratio: "3/5", style: "bare", caption: "" },
+    { src: "images/random/img12.jpg", alt: "Another snapshot",        ratio: "1/1", style: "polaroid", caption: "" }
+  ],
+
+  // About-her facts and personal qualities: edit freely, add or remove.
+  interests: ["Reading books", "Drawing & sketching", "Trees & greenery"],
+  traits: [
+    { title: "Straightforward", text: "Suraia says what she means. She is honest and direct, and people always know where they stand with her." },
+    { title: "Understanding",   text: "She listens before she judges, and tries to see a problem the way the other person sees it." },
+    { title: "Unselfish",       text: "She has little patience for selfishness. She values people who think of others as well as themselves." }
+  ]
+};
+/* ===================== end of editable content ===================== */
+
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TONES=["#cfd9d0","#e6cfcb","#e7dcc1","#c5d3cb","#d9c9b5"];
+function placeholder(label,i=0,ratio="1/1"){
+  const [w,h]=ratio.split("/").map(Number),W=600,H=Math.round(600*h/w),c=TONES[i%TONES.length];
+  const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='${W}' height='${H}' viewBox='0 0 ${W} ${H}'><rect width='100%' height='100%' fill='${c}'/><g fill='none' stroke='#173F35' stroke-opacity='.45' stroke-width='2' stroke-linecap='round' transform='translate(${W/2-30} ${H/2-60}) scale(.6)'><path d='M50 158C48 110 52 60 50 6'/><path d='M50 128C30 124 18 108 16 88c22 2 34 18 34 40zM50 100c20-4 32-20 34-40-22 2-34 18-34 40zM50 72C32 68 22 54 20 36c20 2 30 16 30 36z'/></g><text x='50%' y='${H-26}' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='20' fill='#173F35' fill-opacity='.6'>${label.replace(/[<&>']/g,'')}</text></svg>`;
+  return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);
+}
+/* One image element with graceful fallback. */
+function fillPic(el,item,i=0,ratio="1/1"){
+  const img=new Image(); img.alt=item.alt||item.title||""; img.loading=item.eager?"eager":"lazy"; img.decoding="async";
+  const fb=placeholder(item.alt||"Photo to come",i,ratio);
+  item._full=item.src||fb;
+  img.onload=()=>img.classList.add("ok");
+  img.onerror=()=>{img.onerror=null;item._full=fb;img.src=fb};
+  img.src=item.src||fb; el.appendChild(img);
+  el.dataset.i=i;
+}
+const groups={};
+function register(group,items,i){ (groups[group]=groups[group]||[])[i]=items[i]; }
+function makePic(tag,group,items,i,ratio,cls=""){
+  const b=document.createElement(tag); b.className="pic "+cls; if(tag==="button") b.type="button";
+  b.setAttribute("aria-label","Open image: "+(items[i].alt||items[i].title||"photo"));
+  if(ratio) b.style.aspectRatio=ratio;
+  fillPic(b,items[i],i,ratio||"1/1"); b.dataset.group=group; b.dataset.idx=i; register(group,items,i);
+  return b;
+}
+
+/* ---------- build ---------- */
+const hero=$('[data-slot=hero]'),about=$('[data-slot=about]');
+[[hero,SITE.heroPortrait,"hero","Portrait coming soon","3/4"],[about,SITE.aboutPortrait,"about","Portrait coming soon","4/5"]].forEach(([el,it,g,l,r])=>{
+  it.alt=it.alt||l; fillPic(el,it,0,r); el.dataset.group=g; el.dataset.idx=0; register(g,[it],0); el.setAttribute("role","button"); el.tabIndex=0; el.setAttribute("aria-label","Open image: "+it.alt);
+});
+// facts
+{const f=[["Studied",SITE.degree],["University",SITE.university],["Graduated",SITE.graduationYear],["Loves",SITE.interests.join(", ")]];
+ $('#facts').innerHTML=f.map(([k,v])=>`<li ${v?"":"hidden"}><b>${k}</b><span>${esc(v)}</span></li>`).join("");}
+// books
+SITE.books.forEach((b,i)=>{b.eager=true;const d=document.createElement("div");d.className="book";d.setAttribute("role","listitem");
+ d.appendChild(makePic("button","books",SITE.books,i,"2/3"));d.insertAdjacentHTML("beforeend",`<h3>${esc(b.title)}</h3><small>${esc(b.author)}</small>`);$('#books').appendChild(d);
+ b.alt=`Cover of ${b.title||"a favourite book"}`;b.caption=[b.title,b.author].filter(Boolean).join(", ");
+ d.querySelector("img").alt=b.alt;});
+{const real=SITE.books.filter(b=>b.title&&!/^book title$/i.test(b.title.trim()));
+ $('#favBooks').innerHTML=real.map(b=>`<li>${esc(b.title)}<span>${esc(b.author)}</span></li>`).join("")||"<li>Add titles in the books list</li>";
+ const by={};SITE.books.forEach(b=>{const a=(b.author||"").trim();if(a&&!/^author$/i.test(a))(by[a]=by[a]||[]).push(...(real.includes(b)?[b.title]:[]))});
+ $('#favAuthors').innerHTML=Object.entries(by).map(([a,t])=>`<li>${esc(a)}<span>${esc(t.join(", "))}</span></li>`).join("")||"<li>Add authors in the books list</li>";}
+// book slider
+{const sh=$('#books'),pv=$('#slPrev'),nx=$('#slNext'),pg=$('#slPg');
+ const per=()=>innerWidth<=820?2:4,pages=()=>Math.max(1,Math.ceil(SITE.books.length/per()));
+ const upd=()=>{const w=sh.clientWidth,p=Math.min(pages(),Math.round(sh.scrollLeft/(w+parseFloat(getComputedStyle(sh).columnGap||0)))+1);
+  pg.textContent=p+" / "+pages();pv.disabled=sh.scrollLeft<4;nx.disabled=sh.scrollLeft+w>=sh.scrollWidth-4;
+  const hide=SITE.books.length<=per();$('.sl-ctl').hidden=hide};
+ const go=d=>sh.scrollBy({left:d*(sh.clientWidth+parseFloat(getComputedStyle(sh).columnGap||0)),behavior:"smooth"});
+ pv.onclick=()=>go(-1);nx.onclick=()=>go(1);sh.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();}
+// art
+{const [a,...rest]=SITE.art;
+ $('#artFeature').appendChild(makePic("button","art",SITE.art,0,a.ratio||"5/4"));
+ $('#artFeature').insertAdjacentHTML("beforeend",`<figcaption>${esc(a.title)}<span style="display:block;font:300 .85rem var(--sans);color:var(--gold-d)">${esc(a.caption)}</span></figcaption>`);
+ SITE.art.slice(1).forEach((r,k)=>{const i=k+1,f=document.createElement("figure");f.appendChild(makePic("button","art",SITE.art,i,r.ratio));
+  f.insertAdjacentHTML("beforeend",`<figcaption>${esc(r.title)}<span>${esc(r.caption)}</span></figcaption>`);$('#artGrid').appendChild(f)});}
+// nature
+SITE.nature.forEach((n,i)=>{const f=document.createElement("figure");f.appendChild(makePic("button","nature",SITE.nature,i,null));
+ if(n.caption)f.insertAdjacentHTML("beforeend",`<figcaption>${esc(n.caption)}</figcaption>`);$('#forest').appendChild(f)});
+$('#quotes').innerHTML=SITE.quotes.map(q=>`<blockquote>“${esc(q.text)}”${q.by?`<cite>${esc(q.by)}</cite>`:""}</blockquote>`).join("");
+// random
+const rot=[-2.2,1.6,-.8,2.4,-1.5,.9,-2.6,1.2];
+SITE.random.forEach((p,i)=>{const f=document.createElement("figure");f.className="polaroid "+(p.style||"polaroid");
+ f.style.setProperty("--r",rot[i%rot.length]+"deg");f.style.setProperty("--y",(i%3)*4+"px");f.style.setProperty("--ar",p.ratio||"1/1");
+ f.appendChild(makePic("button","random",SITE.random,i,p.ratio||"1/1"));
+ if(p.caption)f.insertAdjacentHTML("beforeend",`<figcaption>${esc(p.caption)}</figcaption>`);$('#random').appendChild(f)});
+// traits
+$('#traits').innerHTML=SITE.traits.map(t=>`<div class="trait"><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p></div>`).join("");
+$('#yr').textContent="© "+new Date().getFullYear();
+
+/* ---------- lightbox (shared by every gallery) ---------- */
+const lb=$('#lb'),lbImg=$('img',lb),lbCap=$('figcaption',lb),lbCt=$('.ct',lb);
+let cur={g:null,i:0},opener=null,sx=0;
+let tok=0;
+function show(){const L=groups[cur.g],it=L[cur.i],t=++tok,n=L.length;
+ lbCap.textContent=it.caption||it.title||"";lbCt.textContent=(cur.i+1)+" / "+n;
+ $('.p',lb).hidden=$('.n',lb).hidden=n<2;
+ lbImg.classList.remove("ready");
+ const pre=new Image(),fin=()=>{if(t!==tok)return;lbImg.alt=it.alt||it.title||"";lbImg.src=pre.src;lbImg.classList.add("ready")};
+ pre.onload=()=>(pre.decode?pre.decode().catch(()=>{}):Promise.resolve()).then(fin);
+ pre.onerror=()=>{pre.onerror=null;pre.src=placeholder(it.alt||"Photo",cur.i)};
+ pre.src=it._full||it.src;
+ [1,-1].forEach(d=>{const o=L[(cur.i+d+n)%n];if(o&&(o._full||o.src))new Image().src=o._full||o.src});}
+function open(g,i,from){cur={g,i};opener=from;lb.hidden=false;lb.classList.add("open");document.body.style.overflow="hidden";show();$('.x',lb).focus()}
+function close(){lb.classList.remove("open");lb.hidden=true;document.body.style.overflow="";opener&&opener.focus()}
+function step(d){const n=groups[cur.g].length;cur.i=(cur.i+d+n)%n;show()}
+document.addEventListener("click",e=>{const p=e.target.closest(".pic[data-group]");if(p)open(p.dataset.group,+p.dataset.idx,p)});
+document.addEventListener("keydown",e=>{
+ if(!lb.classList.contains("open")){const p=e.target.closest&&e.target.closest(".pic[role=button]");if(p&&(e.key==="Enter"||e.key===" ")){e.preventDefault();p.click()}return}
+ if(e.key==="Escape")close();else if(e.key==="ArrowLeft")step(-1);else if(e.key==="ArrowRight")step(1)});
+$('.x',lb).onclick=close;$('.p',lb).onclick=()=>step(-1);$('.n',lb).onclick=()=>step(1);
+lb.addEventListener("click",e=>{if(e.target===lb||e.target.tagName==="FIGURE")close()});
+lb.addEventListener("touchstart",e=>{sx=e.changedTouches[0].clientX},{passive:true});
+lb.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)step(d>0?-1:1)});
+
+/* ---------- nav + reveal ---------- */
+const burger=$('.burger'),links=$('#links');
+burger.onclick=()=>{const o=links.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+$$('#links a').forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");burger.setAttribute("aria-expanded",false)}));
+const secs=$$("main section[id]"),navA=$$('#links a');
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navA.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe&&secs.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navA.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+s.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe(s));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
+$$(".reveal").forEach(el=>io.observe(el));
+/* staggered entrance for items inside grids */
+const stg=(sel,step,mod)=>$$(sel).forEach((el,i)=>{el.classList.add("pop");el.style.setProperty("--d",(i%mod)*step+"ms");io.observe(el)});
+$$(".book").forEach((el,i)=>el.style.setProperty("--i",i%4));stg("#artGrid figure",90,3);stg("#forest figure",80,4);stg("#random figure",90,4);stg(".trait",130,3);stg("#quotes blockquote",150,3);
+/* scroll progress + nav shadow */
+{const bar=$("#bar"),nv=$("nav");let t=false;
+ const f=()=>{t=false;const h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.transform="scaleX("+(m>0?h.scrollTop/m:0)+")";nv.classList.toggle("scrolled",h.scrollTop>10)};
+ addEventListener("scroll",()=>{if(!t){t=true;requestAnimationFrame(f)}},{passive:true});f();}
+</script>
+</body>
+</html>
